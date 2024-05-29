@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x =10;
+
+        function displaynumber(){
+            console.log("x is " + x); //x는 이미 선언되어있다.
+            console.log("y is"  + y);
+            var y = 20;  // y라는 변수만 호이스팅이 되고 할당된 값은 안된다
+        }
+        displaynumber(); //var 은 거의 사용하지 않는다 재선언 문제
+    </script>
+</body>
+</html>
