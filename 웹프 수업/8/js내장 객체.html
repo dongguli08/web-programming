@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = new Array(); // 배ㅕㄹ의 크기를 지정하지 않음
+        let numbers1 = new Array(4); // 배열의 크기를 지정함
+        
+        let numbers2 = ["one","two","three","four","five"];
+        let numbers3 = Array("one","two","three","four");
+
+        //concat
+        let nums = [1,2,3];
+        let chars = ["a","b","c","d"];
+        let numChars = nums.concat(chars);
+        let charsNums = chars.concat(nums);
+        document.write("nums에 chars 합치면:" , numChars, "<br> chars에 nums 합치면:",charsNums);
+        document.write("<br>")
+        
+        //join
+        let a = [1,2,3];
+        let b = ["a","b","c","d"];
+
+        let string1 = a.join();
+        document.write("구분자 없이:",string1);
+        document.write("<br>");
+        let string2 = b.join('/');
+        document.write(" '/' 구분자 지정:" , string2)
+        document.write("<br>");
+
+        //push , inshift
+        let dong = [1, 2, 3];
+
+    let ret1 = dong.push(4.5);
+    document.write("길이: " + ret1 + " | 배열: " + dong);
+    document.write("<br>");
+
+    let ret2 = dong.unshift(0);
+    document.write("길이: " + ret2 + " | 배열: " + dong);
+
+    </script>
+</body>
+</html>
