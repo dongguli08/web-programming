@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //블록 변수 선언하기
+        function calcsum(n){
+            let sum = 0;
+            for(let i =1; i<n+1; i++){
+                sum += i;
+            }
+            console.log(sum); //블록 변수 선언
+        }
+        calcsum(10);
+
+
+        //전역 변수 선언하기
+        let sum = 0;
+        function calcsum(n){
+            sum = 0; //전역 변수 선언
+            for(let i = 1; i<n+1; i++){
+                sum += i;
+            }
+        }
+        calcsum(10);
+        console.log(sum); //전역 변수 사용
+
+
+        //블록 변수의 재할당
+        function calcsum(n){
+            let sum = 0;
+            for(let i = 1; i<n+1; i++) {sum += i;}
+            sum = 100;
+            console.log(sum);
+        }
+        calcsum(10);
+
+
+        //블록 변수의 재할당
+        function calcsum(n){
+            let sum = 0;
+            for(let i = 1; i<n+1; i++) {
+            sum = 100;
+            sum += i;
+        }
+            console.log(sum);
+        }
+      
+        // // 재선언할 수 없는 let변수 
+        // function calcsum(n){
+        //     let sum = 0;
+        //     for(let i = 1; i< n+1; i++){sum += i}
+        //     let sum;
+        //     console.log(sum)  
+        // }
+
+        //let 변수는 재할당은 가능하지만 재선언은 할 수 없는 변수
+
+        //호이스팅이 없는 let변수
+
+        // let x = 10;
+
+        // function displaynumber(){
+        //     console.log("x is "+ x);
+        //     console.log("y is "+ y); // 선언되지 않은 y를 사용
+        //     let y = 20;
+        // }
+        // displaynumber()
+
+    </script>
+</body>
+</html>
