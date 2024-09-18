@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let account = new Object();
+        account.owner = "하동건";
+        account.code = "111";
+        account.balance = 35000;
+
+        let name = account["owner"];
+        account["balance"] = 10000;
+        account.balance += 20000;
+
+        
+        function deposit(money){
+            this.balance += money;
+        }
+        account.deposit = deposit;
+    </script>
+</body>
+</html>

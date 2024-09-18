@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(name, birth){
+            this.name = name;
+            this.birth = birth;
+
+            this.sayname = function () {return this.name;}; 
+        };
+    </script>
+</head>
+<body>
+    <script>
+        let junghan = new Student("이정한", 16);
+        let sorim = new Student("김소림", 17);
+
+        console.log(junghan);
+        console.log(sorim); 
+        console.log(junghan.sayname()); 
+        console.log(sorim.sayname()); 
+    
+    </script>
+</body>
+</html>
