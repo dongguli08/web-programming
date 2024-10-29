@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="inntext()">innerText로 표시하기</button>
+    <button onclick="innhtml()">innerHTML로 표시하기</button>
+    <h1>현재 시각:</h1>
+    <div id= "current"></div>
+
+    <script>
+        var now = new Date();
+
+        function inntext() {
+            document.getElementById("current").innerText = now;
+        }
+
+        function innhtml() {
+            document.getElementById("current").innerHTML = "<em>" + now + "</em>";
+        }
+    </script>
+</body>
+</html>
+
+<!-- 이 두 가지 속성을 사용할 때의 주요 차이는, innerText는 텍스트로만 표시하고 innerHTML은 HTML 형식을 포함할 수 있다는 점이다. -->
