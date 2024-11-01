@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="prod-pic">
+        <img src="lgtwins.png" alt="홍창기" id="cup" width="200" height="200" onclick="displayScr()">
+    </div>
+
+    <script>
+        function displayScr(){
+            var cup = document.querySelector("#cup");
+            alert("이미지 소스:" + cup.getAttribute("src"))
+        }
+
+        function changePic(){
+            var newpic = this.src;
+            cup.setAttribute("src",newpic);
+        }
+    </script>
+</body>
+</html>

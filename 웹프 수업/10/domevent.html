@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<!-- <img src="image.png" alt="baseball" id="baseball"> -->
+<!-- 
+<script>
+var cup = document.querySelector("#baseball");
+cup.onclick = function(){
+    alert("이미지를 클릭했습니다");
+} -->
+
+
+<!-- <img src="image.png" id="baseball">
+
+<script>
+    var cup = document.querySelector("#baseball");
+    cup.onclick = changePic;
+
+    function changePic(){
+        cup.src = "moon.png";
+    }  //사진 바뀌는 코드 -->
+
+    <!-- <img src="lgtwins.png" id="baseball">
+
+    <script>
+        var cup = document.querySelector("#baseball");
+        cup.onclick = function(event){
+            alert("이벤트 유형:" + event.type + "이벤트 발생 위치:" + event.pageX + "," + event.pageY);
+        }
+    </script> -->
+
+    <!-- <img src="lgtwins.png" id="baseball">
+
+    <script>
+        var lg = document.querySelector("#baseball");
+        lg.onclick = function(event){
+            alert("클릭한 이미지 파일:" + this.src);
+        }
+    </script> -->
+
+    <!-- <img src="lgtwins.png" id="baseball">
+
+<script>
+    var baseball = document.getElementById("baseball"); // ID 선택자에서 # 제거
+    baseball.addEventListener("mouseover", changePic);
+    baseball.addEventListener("mouseout", originPic);
+
+    function changePic() {
+        baseball.src = "image.png"; // 마우스 오버 시 변경할 이미지 경로
+    }
+
+    function originPic() {
+        baseball.src = "moon.png"; // 마우스 아웃 시 원래 이미지 경로
+    }
+</script> -->
+
+
+<img src="lgtwins.png" id="baseball">
+
+<script>
+    var baseball = document.getElementById("baseball"); // ID 선택자에서 # 제거
+        baseball.addEventListener("mouseover",function(){
+            baseball.src = "image.png"
+        });
+        baseball.addEventListener("mouseout",function(){
+            baseball.src = "moon.png"
+        });
+</script>
+
+</script>
+</script>
+</body>
+</html>
+
