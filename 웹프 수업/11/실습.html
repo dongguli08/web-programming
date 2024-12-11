@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 방법1 -->
+    <button id="a">abc</button>
+    <!-- 방법2 -->
+    <button id="a" onclick="alert('hello world')">abc</button>
+
+    <script>
+        btn = document.getElementById('a');
+        btn.onclick = function f(e){
+            alert('hello world')
+        }
+    </script>
+</body>
+</html>

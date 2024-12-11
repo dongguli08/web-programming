@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createDiv() {  <!-- 함수 이름을 createDiv로 수정 -->
+            let obj = document.getElementById('parent');
+            let newDiv = document.createElement('div');
+            newDiv.innerHTMl = '새로 생성된 DIV 입니다.';
+            newDiv.setAttribute('id', 'myDiv');
+            newDiv.style.backgroundColor = 'yellow';
+            newDiv.addEventListener('click', function () {
+                let p = this.parentElement;
+                p.removeChild(this);
+            });
+            obj.appendChild(newDiv);
+        }
+    </script>
+</head>
+<body id="parent">
+    <h3>aldksjfal;kdfj;aljf;lafj;afj;ladjf;lafj;lasdjf;lasdjf;jdl;ajf;lasdjf;alsdfjas</h3>
+    <a href="javascript:createDiv()">div생성</a> <!-- 함수 이름을 createDiv로 맞춤 -->
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming</title>
+	<link rel="stylesheet" href="css/nodelist.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button onclick="newRegister(); return false">추가</button> 
+      <!-- return false를 하지 않으면 추가 할때마다 페이지 새로고침 -->
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+  <script>
+    function newRegister(){
+      let newItem = document.createElement('li');
+      let subject = document.querySelector("#subject");
+      let newText = document.createTextNode(subject.value);
+      newItem.appendChild(newText);
+
+      let itemList = document.querySelector("#itemList");
+      itemList.appendChild(newItem)
+
+      subject.value = '';
+
+      let items = document.querySelectorAll("li");
+      for(i=0; i<items.length; i++){
+        items[i].addEventListener("click",function(){
+          if(this.parentNode)
+            this.parentNode.removeChild(this)
+        });
+      }
+
+    }
+  </script>
+</body>
+</html>
